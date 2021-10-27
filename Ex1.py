@@ -1,16 +1,17 @@
-saltos_do_atleta = ['Primeiro', 'Segundo', 'Terceiro', 'Quarto', 'Quinto']
+texto_ordem_saltos = ['Primeiro salto', 'Segundo salto', 'Terceiro salto', 'Quarto salto', 'Quinto salto']
 
-distância_saltos = [0.0, 0.0, 0.0, 0.0, 0.0]
+saltos_atleta = [0.0, 0.0, 0.0, 0.0, 0.0]
+
 atleta = input("Atleta: ")
+
+
 if atleta != '':
-    for salto in range(0, 5):
-    distância_saltos[salto] = float(input(f"{texto_salto[salto]} salto: "))
+    for c in range(0, 5):
+        saltos_atleta[c] = float(input(f"{texto_ordem_saltos[c]}: "))
 
-    distância_saltos.sort()
-    media_saltos = (distância_saltos[1] + distância_saltos[2] + distância_saltos[3])/3
+    media_saltos = (saltos_atleta[0] + saltos_atleta[1] + saltos_atleta[2] + saltos_atleta[3] + saltos_atleta[4])/5
 
-    print("Resultado final: ")
+    print("\nResultado final: ")
     print(f"Atleta: {atleta}")
-    print(f"Media de saltos.: {media_saltos:.2f}\n")
-else:
-    print('Informe o nome do atleta')
+    print(f"Saltos: {saltos_atleta[0]} - {saltos_atleta[1]} - {saltos_atleta[2]} - {saltos_atleta[3]} - {saltos_atleta[4]}")
+    print(f"Média dos saltos: {media_saltos:} m")
